@@ -1,0 +1,7 @@
+YOLOv8s Evaluation Metrics
+--------------------------
+
+Precision: 0.883
+Recall: 0.662
+mAP50: 0.752
+mAP50-95: 0.390
