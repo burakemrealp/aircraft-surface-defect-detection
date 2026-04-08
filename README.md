@@ -167,3 +167,10 @@ There are several potential improvements that can further enhance the performanc
 
 ## License
 MIT License
+
+## Acknowledgements / Credits
+
+I would like to thank the open‑source community and the developers of the Ultralytics YOLOv8 framework for providing powerful tools that made this project possible.  
+Special thanks to the creators of publicly available aircraft inspection datasets and research papers that inspired the development of this system.
+
+This project was developed as part of my ongoing learning journey in computer vision, deep learning, and applied AI for real‑world engineering problems.
