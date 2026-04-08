@@ -1,5 +1,7 @@
 # Aircraft Surface Crack Detection using YOLOv8
 
+![Sample prediction](results/sample_predictions/crack_sample1.jpg)
+
 This project presents an automated crack detection system for aircraft fuselage surfaces using deep learning–based computer vision. A custom dataset of real aircraft surface images was used to train YOLOv8 models, achieving high accuracy in detecting structural cracks.
 
 ## Features
@@ -27,6 +29,51 @@ This project presents an automated crack detection system for aircraft fuselage 
   * utils.py
 * requirements.txt
 * README.md
+
+## Technical Overview
+
+This project uses the YOLOv8 object detection architecture to identify structural cracks on aircraft fuselage surfaces. The workflow consists of four main components:
+
+### **1. Dataset**
+A custom dataset of aircraft fuselage images was prepared, containing manually annotated crack regions.  
+The dataset follows the YOLO format:
+
+- `images/` — training and validation images  
+- `labels/` — corresponding `.txt` annotation files  
+- `aircraft_fuselage.yaml` — dataset configuration  
+
+### **2. Model Architecture**
+Two YOLOv8 variants were trained:
+
+- **YOLOv8n** — lightweight baseline model  
+- **YOLOv8s** — improved model with higher accuracy  
+
+Both models use:
+
+- CSPDarknet backbone  
+- PAN-FPN neck  
+- Decoupled detection head  
+
+### **3. Training Pipeline**
+Training was performed using:
+
+- Image size: 640×640  
+- Epochs: 50  
+- Optimizer: SGD  
+- Data augmentations:  
+  - Horizontal flip  
+  - Random brightness/contrast  
+  - Mosaic augmentation  
+
+### **4. Evaluation**
+Models were evaluated using:
+
+- Precision  
+- Recall  
+- mAP50  
+- mAP50–95  
+
+YOLOv8s achieved the best performance and is used as the final model.
 
 ## Model Performance
 | Metric | YOLOv8n | YOLOv8s |
