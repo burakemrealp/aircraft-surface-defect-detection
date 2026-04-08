@@ -152,6 +152,18 @@ models/
 You can then run inference using:
 yolo detect predict model=models/yolov8s_best.pt source=path/to/images
 ```
+## Future Work / Improvements
+
+There are several potential improvements that can further enhance the performance and usability of this system:
+
+- **Expand the dataset** with more diverse aircraft surface conditions  
+- **Train larger YOLOv8 models** (YOLOv8m / YOLOv8l) for higher accuracy  
+- **Integrate segmentation models** to detect crack shapes and lengths  
+- **Deploy the model on edge devices** (Jetson Nano, Raspberry Pi) for real‑time field use  
+- **Develop a web-based interface** for uploading images and viewing predictions  
+- **Add automated report generation** for maintenance teams  
+- **Experiment with other architectures** such as Faster R‑CNN or SAM for comparison  
+
 
 ## License
 MIT License
